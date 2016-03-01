@@ -64,7 +64,7 @@ Clock.prototype.callback = function(payload){
         case "TIMEOUT":
             if(origin !== this){
                 this.runningTime = DEFAULT_TIME;
-                alert(this.selector + " is the winner!");
+                alert("Player " + this.playerIndex + " is the winner!");
                 App.notifyReset(this);
             }
             break
@@ -87,8 +87,8 @@ Clock.prototype.render = function(){
     _counter.innerHTML = this.formatTime(this.runningTime);;
 
     var _btn = document.createElement("button");
-    _btn.className = 'btn-primary';
-    _btn.innerHTML = "Start Timer";
+    _btn.className = 'pure-button pure-button-primary';
+    _btn.innerHTML = "Player " + this.playerIndex + " Timer";
     _btn.onclick = this.click.bind(this);
 
     _div.appendChild(_btn);
