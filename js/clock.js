@@ -2,7 +2,7 @@
 var App = new App();
 
 // Constants
-var DEFAULT_TIME = 10;
+var DEFAULT_TIME = 240;
 var PLAYER_INDEX = 0;
 
 function Clock(selector){
