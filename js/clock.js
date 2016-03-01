@@ -20,7 +20,7 @@ function Clock(selector){
             this.partners = []
             if(origin !== this && this.partners.indexOf(origin) > -1)
     */
-    if(this.playerIndex > 2) throw new Error("You've exceeded two clocks");
+    if(playerIndex >= 2) throw new Error("You've exceeded two clocks");
 
     App.register(this.callback.bind(this));
 };
