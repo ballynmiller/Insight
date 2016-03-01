@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="/js/dispacther.js"></script>
-        <script src="/js/app.js"></script>
-        <script src="/js/button.js"></script>
+        <script src="js/dispatcher.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/clock.js"></script>
 
-        <link href="/css/main.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- TODO(anon): add reset button -->
-        <!-- TODO(anon): left clock -->
-        <!-- TODO(anon): right clock -->
+        <div id="clock-1"></div>
+        <div id="reset-container">
+            <button onclick="App.notifyReset()">Reset</button>
+        </div>
+        <div id="clock-2"></div>
     </body>
+
+    <script>
+        clock_1 = new Clock("#clock-1").render();
+        clock_2 = new Clock("#clock-2").render();
+    </script>
 </html>
