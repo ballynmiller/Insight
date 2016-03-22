@@ -10,16 +10,6 @@ function Clock(selector){
     this.selector = selector;
     this.timer = null;
     this.playerIndex = PLAYER_INDEX += 1
-    /*
-        Based on reqs assumption made that there will only be
-        two clocks present. If the requirements changed this
-        could easily be removed and allow n clocks to be created
-        a pair of clocks would need to be registered to each other
-        to avoid all clocks updating when one fires a request
-        Logic::
-            this.partners = []
-            if(origin !== this && this.partners.indexOf(origin) > -1)
-    */
     if(this.playerIndex > 2) throw new Error("You've exceeded two clocks");
 
     App.register(this.callback.bind(this));
